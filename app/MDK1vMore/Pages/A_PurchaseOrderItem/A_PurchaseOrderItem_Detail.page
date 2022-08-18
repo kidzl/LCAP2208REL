@@ -1,0 +1,529 @@
+{
+	"Caption": "A_PurchaseOrderItem",
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"DetailImage": "",
+						"HeadlineText": "{RequisitionerName}",
+						"Subhead": "{PurchaseOrder}",
+						"Tags": [],
+						"BodyText": "",
+						"Footnote": "{PurchasingDocumentDeletionCode}",
+						"Description": "{PurchaseOrderItem}",
+						"StatusText": "{PurchaseOrderItemText}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{Plant}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "PurchaseOrder",
+							"Value": "{PurchaseOrder}"
+						},
+						{
+							"KeyName": "PurchaseOrderItem",
+							"Value": "{PurchaseOrderItem}"
+						},
+						{
+							"KeyName": "PurchasingDocumentDeletionCode",
+							"Value": "{PurchasingDocumentDeletionCode}"
+						},
+						{
+							"KeyName": "PurchaseOrderItemText",
+							"Value": "{PurchaseOrderItemText}"
+						},
+						{
+							"KeyName": "Plant",
+							"Value": "{Plant}"
+						},
+						{
+							"KeyName": "StorageLocation",
+							"Value": "{StorageLocation}"
+						},
+						{
+							"KeyName": "MaterialGroup",
+							"Value": "{MaterialGroup}"
+						},
+						{
+							"KeyName": "PurchasingInfoRecord",
+							"Value": "{PurchasingInfoRecord}"
+						},
+						{
+							"KeyName": "SupplierMaterialNumber",
+							"Value": "{SupplierMaterialNumber}"
+						},
+						{
+							"KeyName": "OrderQuantity",
+							"Value": "{OrderQuantity}"
+						},
+						{
+							"KeyName": "PurchaseOrderQuantityUnit",
+							"Value": "{PurchaseOrderQuantityUnit}"
+						},
+						{
+							"KeyName": "OrderPriceUnit",
+							"Value": "{OrderPriceUnit}"
+						},
+						{
+							"KeyName": "OrderPriceUnitToOrderUnitNmrtr",
+							"Value": "{OrderPriceUnitToOrderUnitNmrtr}"
+						},
+						{
+							"KeyName": "OrdPriceUnitToOrderUnitDnmntr",
+							"Value": "{OrdPriceUnitToOrderUnitDnmntr}"
+						},
+						{
+							"KeyName": "DocumentCurrency",
+							"Value": "{DocumentCurrency}"
+						},
+						{
+							"KeyName": "NetPriceAmount",
+							"Value": "{NetPriceAmount}"
+						},
+						{
+							"KeyName": "NetPriceQuantity",
+							"Value": "{NetPriceQuantity}"
+						},
+						{
+							"KeyName": "TaxCode",
+							"Value": "{TaxCode}"
+						},
+						{
+							"KeyName": "ShippingInstruction",
+							"Value": "{ShippingInstruction}"
+						},
+						{
+							"KeyName": "TaxDeterminationDate",
+							"Value": "{TaxDeterminationDate}"
+						},
+						{
+							"KeyName": "TaxCountry",
+							"Value": "{TaxCountry}"
+						},
+						{
+							"KeyName": "PriceIsToBePrinted",
+							"Value": "{PriceIsToBePrinted}"
+						},
+						{
+							"KeyName": "OverdelivTolrtdLmtRatioInPct",
+							"Value": "{OverdelivTolrtdLmtRatioInPct}"
+						},
+						{
+							"KeyName": "UnlimitedOverdeliveryIsAllowed",
+							"Value": "{UnlimitedOverdeliveryIsAllowed}"
+						},
+						{
+							"KeyName": "UnderdelivTolrtdLmtRatioInPct",
+							"Value": "{UnderdelivTolrtdLmtRatioInPct}"
+						},
+						{
+							"KeyName": "ValuationType",
+							"Value": "{ValuationType}"
+						},
+						{
+							"KeyName": "IsCompletelyDelivered",
+							"Value": "{IsCompletelyDelivered}"
+						},
+						{
+							"KeyName": "IsFinallyInvoiced",
+							"Value": "{IsFinallyInvoiced}"
+						},
+						{
+							"KeyName": "PurchaseOrderItemCategory",
+							"Value": "{PurchaseOrderItemCategory}"
+						},
+						{
+							"KeyName": "AccountAssignmentCategory",
+							"Value": "{AccountAssignmentCategory}"
+						},
+						{
+							"KeyName": "MultipleAcctAssgmtDistribution",
+							"Value": "{MultipleAcctAssgmtDistribution}"
+						},
+						{
+							"KeyName": "PartialInvoiceDistribution",
+							"Value": "{PartialInvoiceDistribution}"
+						},
+						{
+							"KeyName": "GoodsReceiptIsExpected",
+							"Value": "{GoodsReceiptIsExpected}"
+						},
+						{
+							"KeyName": "GoodsReceiptIsNonValuated",
+							"Value": "{GoodsReceiptIsNonValuated}"
+						},
+						{
+							"KeyName": "InvoiceIsExpected",
+							"Value": "{InvoiceIsExpected}"
+						},
+						{
+							"KeyName": "InvoiceIsGoodsReceiptBased",
+							"Value": "{InvoiceIsGoodsReceiptBased}"
+						},
+						{
+							"KeyName": "PurchaseContract",
+							"Value": "{PurchaseContract}"
+						},
+						{
+							"KeyName": "PurchaseContractItem",
+							"Value": "{PurchaseContractItem}"
+						},
+						{
+							"KeyName": "Customer",
+							"Value": "{Customer}"
+						},
+						{
+							"KeyName": "Subcontractor",
+							"Value": "{Subcontractor}"
+						},
+						{
+							"KeyName": "SupplierIsSubcontractor",
+							"Value": "{SupplierIsSubcontractor}"
+						},
+						{
+							"KeyName": "ItemNetWeight",
+							"Value": "{ItemNetWeight}"
+						},
+						{
+							"KeyName": "ItemWeightUnit",
+							"Value": "{ItemWeightUnit}"
+						},
+						{
+							"KeyName": "TaxJurisdiction",
+							"Value": "{TaxJurisdiction}"
+						},
+						{
+							"KeyName": "PricingDateControl",
+							"Value": "{PricingDateControl}"
+						},
+						{
+							"KeyName": "ItemVolume",
+							"Value": "{ItemVolume}"
+						},
+						{
+							"KeyName": "ItemVolumeUnit",
+							"Value": "{ItemVolumeUnit}"
+						},
+						{
+							"KeyName": "SupplierConfirmationControlKey",
+							"Value": "{SupplierConfirmationControlKey}"
+						},
+						{
+							"KeyName": "IncotermsClassification",
+							"Value": "{IncotermsClassification}"
+						},
+						{
+							"KeyName": "IncotermsTransferLocation",
+							"Value": "{IncotermsTransferLocation}"
+						},
+						{
+							"KeyName": "EvaldRcptSettlmtIsAllowed",
+							"Value": "{EvaldRcptSettlmtIsAllowed}"
+						},
+						{
+							"KeyName": "PurchaseRequisition",
+							"Value": "{PurchaseRequisition}"
+						},
+						{
+							"KeyName": "PurchaseRequisitionItem",
+							"Value": "{PurchaseRequisitionItem}"
+						},
+						{
+							"KeyName": "IsReturnsItem",
+							"Value": "{IsReturnsItem}"
+						},
+						{
+							"KeyName": "RequisitionerName",
+							"Value": "{RequisitionerName}"
+						},
+						{
+							"KeyName": "ServicePackage",
+							"Value": "{ServicePackage}"
+						},
+						{
+							"KeyName": "EarmarkedFunds",
+							"Value": "{EarmarkedFunds}"
+						},
+						{
+							"KeyName": "EarmarkedFundsDocument",
+							"Value": "{EarmarkedFundsDocument}"
+						},
+						{
+							"KeyName": "EarmarkedFundsItem",
+							"Value": "{EarmarkedFundsItem}"
+						},
+						{
+							"KeyName": "EarmarkedFundsDocumentItem",
+							"Value": "{EarmarkedFundsDocumentItem}"
+						},
+						{
+							"KeyName": "IncotermsLocation1",
+							"Value": "{IncotermsLocation1}"
+						},
+						{
+							"KeyName": "IncotermsLocation2",
+							"Value": "{IncotermsLocation2}"
+						},
+						{
+							"KeyName": "Material",
+							"Value": "{Material}"
+						},
+						{
+							"KeyName": "InternationalArticleNumber",
+							"Value": "{InternationalArticleNumber}"
+						},
+						{
+							"KeyName": "ManufacturerMaterial",
+							"Value": "{ManufacturerMaterial}"
+						},
+						{
+							"KeyName": "ServicePerformer",
+							"Value": "{ServicePerformer}"
+						},
+						{
+							"KeyName": "ProductType",
+							"Value": "{ProductType}"
+						},
+						{
+							"KeyName": "ExpectedOverallLimitAmount",
+							"Value": "{ExpectedOverallLimitAmount}"
+						},
+						{
+							"KeyName": "OverallLimitAmount",
+							"Value": "{OverallLimitAmount}"
+						},
+						{
+							"KeyName": "PurContractForOverallLimit",
+							"Value": "{PurContractForOverallLimit}"
+						},
+						{
+							"KeyName": "PurchasingParentItem",
+							"Value": "{PurchasingParentItem}"
+						},
+						{
+							"KeyName": "ReferenceDeliveryAddressID",
+							"Value": "{ReferenceDeliveryAddressID}"
+						},
+						{
+							"KeyName": "DeliveryAddressID",
+							"Value": "{DeliveryAddressID}"
+						},
+						{
+							"KeyName": "DeliveryAddressName",
+							"Value": "{DeliveryAddressName}"
+						},
+						{
+							"KeyName": "DeliveryAddressName2",
+							"Value": "{DeliveryAddressName2}"
+						},
+						{
+							"KeyName": "DeliveryAddressFullName",
+							"Value": "{DeliveryAddressFullName}"
+						},
+						{
+							"KeyName": "DeliveryAddressStreetName",
+							"Value": "{DeliveryAddressStreetName}"
+						},
+						{
+							"KeyName": "DeliveryAddressHouseNumber",
+							"Value": "{DeliveryAddressHouseNumber}"
+						},
+						{
+							"KeyName": "DeliveryAddressCityName",
+							"Value": "{DeliveryAddressCityName}"
+						},
+						{
+							"KeyName": "DeliveryAddressPostalCode",
+							"Value": "{DeliveryAddressPostalCode}"
+						},
+						{
+							"KeyName": "DeliveryAddressRegion",
+							"Value": "{DeliveryAddressRegion}"
+						},
+						{
+							"KeyName": "DeliveryAddressCountry",
+							"Value": "{DeliveryAddressCountry}"
+						},
+						{
+							"KeyName": "DeliveryAddressDistrictName",
+							"Value": "{DeliveryAddressDistrictName}"
+						},
+						{
+							"KeyName": "DownPaymentType",
+							"Value": "{DownPaymentType}"
+						},
+						{
+							"KeyName": "DownPaymentPercentageOfTotAmt",
+							"Value": "{DownPaymentPercentageOfTotAmt}"
+						},
+						{
+							"KeyName": "DownPaymentAmount",
+							"Value": "{DownPaymentAmount}"
+						},
+						{
+							"KeyName": "DownPaymentDueDate",
+							"Value": "{DownPaymentDueDate}"
+						},
+						{
+							"KeyName": "BR_MaterialUsage",
+							"Value": "{BR_MaterialUsage}"
+						},
+						{
+							"KeyName": "BR_MaterialOrigin",
+							"Value": "{BR_MaterialOrigin}"
+						},
+						{
+							"KeyName": "BR_CFOPCategory",
+							"Value": "{BR_CFOPCategory}"
+						},
+						{
+							"KeyName": "BR_IsProducedInHouse",
+							"Value": "{BR_IsProducedInHouse}"
+						},
+						{
+							"KeyName": "ConsumptionTaxCtrlCode",
+							"Value": "{ConsumptionTaxCtrlCode}"
+						},
+						{
+							"KeyName": "PurgProdCmplncSupplierStatus",
+							"Value": "{PurgProdCmplncSupplierStatus}"
+						},
+						{
+							"KeyName": "PurgProductMarketabilityStatus",
+							"Value": "{PurgProductMarketabilityStatus}"
+						},
+						{
+							"KeyName": "PurgSafetyDataSheetStatus",
+							"Value": "{PurgSafetyDataSheetStatus}"
+						},
+						{
+							"KeyName": "PurgProdCmplncDngrsGoodsStatus",
+							"Value": "{PurgProdCmplncDngrsGoodsStatus}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"Header": {
+						"Caption": "to_AccountAssignment"
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{PurchaseOrderItem}",
+						"DetailImage": "",
+						"DetailImageIsCircular": false,
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{GoodsRecipientName}",
+						"Footnote": "{AccountAssignmentNumber}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{IsDeleted}",
+						"Subhead": "{PurchaseOrder}",
+						"SubstatusText": "{PurchaseOrderQuantityUnit}"
+					},
+					"Target": {
+						"EntitySet": "{#Property:@odata.readLink}/to_AccountAssignment",
+						"Service": "/MDK1vMore/Services/service1.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "to_PurchaseOrderItemNote"
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{TextObjectType}",
+						"DetailImage": "",
+						"DetailImageIsCircular": false,
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{PurchaseOrder}",
+						"Footnote": "{Language}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{PlainLongText}",
+						"Subhead": "{PurchaseOrderItem}",
+						"SubstatusText": ""
+					},
+					"Target": {
+						"EntitySet": "{#Property:@odata.readLink}/to_PurchaseOrderItemNote",
+						"Service": "/MDK1vMore/Services/service1.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "to_PurchaseOrderPricingElement"
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{PricingDocument}",
+						"DetailImage": "",
+						"DetailImageIsCircular": false,
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{PurchaseOrder}",
+						"Footnote": "{PricingDocumentItem}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{PricingProcedureStep}",
+						"Subhead": "{PurchaseOrderItem}",
+						"SubstatusText": "{PricingProcedureCounter}"
+					},
+					"Target": {
+						"EntitySet": "{#Property:@odata.readLink}/to_PurchaseOrderPricingElement",
+						"Service": "/MDK1vMore/Services/service1.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "to_ScheduleLine"
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{ScheduleLine}",
+						"DetailImage": "",
+						"DetailImageIsCircular": false,
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{PurchasingDocument}",
+						"Footnote": "{DelivDateCategory}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{ScheduleLineDeliveryDate}",
+						"Subhead": "{PurchasingDocumentItem}",
+						"SubstatusText": "{PurchaseOrderQuantityUnit}"
+					},
+					"Target": {
+						"EntitySet": "{#Property:@odata.readLink}/to_ScheduleLine",
+						"Service": "/MDK1vMore/Services/service1.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"DataSubscriptions": [
+				"A_PurOrdAccountAssignment",
+				"A_PurchaseOrderItemNote",
+				"A_PurOrdPricingElement",
+				"A_PurchaseOrderScheduleLine"
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_PurchaseOrderItem_Detail",
+	"PrefersLargeCaption": true
+}

@@ -1,0 +1,60 @@
+{
+	"Caption": "A_PurchaseOrderNote",
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"DetailImage": "",
+						"HeadlineText": "{PurchaseOrder}",
+						"Subhead": "{TextObjectType}",
+						"Tags": [],
+						"BodyText": "",
+						"Footnote": "{PlainLongText}",
+						"Description": "{Language}",
+						"StatusText": "",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": ""
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "PurchaseOrder",
+							"Value": "{PurchaseOrder}"
+						},
+						{
+							"KeyName": "TextObjectType",
+							"Value": "{TextObjectType}"
+						},
+						{
+							"KeyName": "Language",
+							"Value": "{Language}"
+						},
+						{
+							"KeyName": "PlainLongText",
+							"Value": "{PlainLongText}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_PurchaseOrderNote_Detail",
+	"PrefersLargeCaption": true
+}

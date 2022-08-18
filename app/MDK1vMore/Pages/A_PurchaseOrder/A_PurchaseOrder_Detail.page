@@ -1,0 +1,375 @@
+{
+	"Caption": "A_PurchaseOrder",
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"DetailImage": "",
+						"HeadlineText": "{SupplierRespSalesPersonName}",
+						"Subhead": "{PurchaseOrder}",
+						"Tags": [],
+						"BodyText": "",
+						"Footnote": "{PurchaseOrderType}",
+						"Description": "{CompanyCode}",
+						"StatusText": "{PurchasingDocumentDeletionCode}",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": "{PurchasingProcessingStatus}"
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "PurchaseOrder",
+							"Value": "{PurchaseOrder}"
+						},
+						{
+							"KeyName": "CompanyCode",
+							"Value": "{CompanyCode}"
+						},
+						{
+							"KeyName": "PurchaseOrderType",
+							"Value": "{PurchaseOrderType}"
+						},
+						{
+							"KeyName": "PurchasingDocumentDeletionCode",
+							"Value": "{PurchasingDocumentDeletionCode}"
+						},
+						{
+							"KeyName": "PurchasingProcessingStatus",
+							"Value": "{PurchasingProcessingStatus}"
+						},
+						{
+							"KeyName": "CreatedByUser",
+							"Value": "{CreatedByUser}"
+						},
+						{
+							"KeyName": "CreationDate",
+							"Value": "{CreationDate}"
+						},
+						{
+							"KeyName": "LastChangeDateTime",
+							"Value": "{LastChangeDateTime}"
+						},
+						{
+							"KeyName": "Supplier",
+							"Value": "{Supplier}"
+						},
+						{
+							"KeyName": "PurchaseOrderSubtype",
+							"Value": "{PurchaseOrderSubtype}"
+						},
+						{
+							"KeyName": "Language",
+							"Value": "{Language}"
+						},
+						{
+							"KeyName": "PaymentTerms",
+							"Value": "{PaymentTerms}"
+						},
+						{
+							"KeyName": "CashDiscount1Days",
+							"Value": "{CashDiscount1Days}"
+						},
+						{
+							"KeyName": "CashDiscount2Days",
+							"Value": "{CashDiscount2Days}"
+						},
+						{
+							"KeyName": "NetPaymentDays",
+							"Value": "{NetPaymentDays}"
+						},
+						{
+							"KeyName": "CashDiscount1Percent",
+							"Value": "{CashDiscount1Percent}"
+						},
+						{
+							"KeyName": "CashDiscount2Percent",
+							"Value": "{CashDiscount2Percent}"
+						},
+						{
+							"KeyName": "PurchasingOrganization",
+							"Value": "{PurchasingOrganization}"
+						},
+						{
+							"KeyName": "PurchasingDocumentOrigin",
+							"Value": "{PurchasingDocumentOrigin}"
+						},
+						{
+							"KeyName": "PurchasingGroup",
+							"Value": "{PurchasingGroup}"
+						},
+						{
+							"KeyName": "PurchaseOrderDate",
+							"Value": "{PurchaseOrderDate}"
+						},
+						{
+							"KeyName": "DocumentCurrency",
+							"Value": "{DocumentCurrency}"
+						},
+						{
+							"KeyName": "ExchangeRate",
+							"Value": "{ExchangeRate}"
+						},
+						{
+							"KeyName": "ExchangeRateIsFixed",
+							"Value": "{ExchangeRateIsFixed}"
+						},
+						{
+							"KeyName": "ValidityStartDate",
+							"Value": "{ValidityStartDate}"
+						},
+						{
+							"KeyName": "ValidityEndDate",
+							"Value": "{ValidityEndDate}"
+						},
+						{
+							"KeyName": "SupplierQuotationExternalID",
+							"Value": "{SupplierQuotationExternalID}"
+						},
+						{
+							"KeyName": "PurchasingCollectiveNumber",
+							"Value": "{PurchasingCollectiveNumber}"
+						},
+						{
+							"KeyName": "SupplierRespSalesPersonName",
+							"Value": "{SupplierRespSalesPersonName}"
+						},
+						{
+							"KeyName": "SupplierPhoneNumber",
+							"Value": "{SupplierPhoneNumber}"
+						},
+						{
+							"KeyName": "SupplyingSupplier",
+							"Value": "{SupplyingSupplier}"
+						},
+						{
+							"KeyName": "SupplyingPlant",
+							"Value": "{SupplyingPlant}"
+						},
+						{
+							"KeyName": "IncotermsClassification",
+							"Value": "{IncotermsClassification}"
+						},
+						{
+							"KeyName": "CorrespncExternalReference",
+							"Value": "{CorrespncExternalReference}"
+						},
+						{
+							"KeyName": "CorrespncInternalReference",
+							"Value": "{CorrespncInternalReference}"
+						},
+						{
+							"KeyName": "InvoicingParty",
+							"Value": "{InvoicingParty}"
+						},
+						{
+							"KeyName": "ReleaseIsNotCompleted",
+							"Value": "{ReleaseIsNotCompleted}"
+						},
+						{
+							"KeyName": "PurchasingCompletenessStatus",
+							"Value": "{PurchasingCompletenessStatus}"
+						},
+						{
+							"KeyName": "IncotermsVersion",
+							"Value": "{IncotermsVersion}"
+						},
+						{
+							"KeyName": "IncotermsLocation1",
+							"Value": "{IncotermsLocation1}"
+						},
+						{
+							"KeyName": "IncotermsLocation2",
+							"Value": "{IncotermsLocation2}"
+						},
+						{
+							"KeyName": "ManualSupplierAddressID",
+							"Value": "{ManualSupplierAddressID}"
+						},
+						{
+							"KeyName": "IsEndOfPurposeBlocked",
+							"Value": "{IsEndOfPurposeBlocked}"
+						},
+						{
+							"KeyName": "AddressCityName",
+							"Value": "{AddressCityName}"
+						},
+						{
+							"KeyName": "AddressFaxNumber",
+							"Value": "{AddressFaxNumber}"
+						},
+						{
+							"KeyName": "AddressHouseNumber",
+							"Value": "{AddressHouseNumber}"
+						},
+						{
+							"KeyName": "AddressName",
+							"Value": "{AddressName}"
+						},
+						{
+							"KeyName": "AddressPostalCode",
+							"Value": "{AddressPostalCode}"
+						},
+						{
+							"KeyName": "AddressStreetName",
+							"Value": "{AddressStreetName}"
+						},
+						{
+							"KeyName": "AddressPhoneNumber",
+							"Value": "{AddressPhoneNumber}"
+						},
+						{
+							"KeyName": "AddressRegion",
+							"Value": "{AddressRegion}"
+						},
+						{
+							"KeyName": "AddressCountry",
+							"Value": "{AddressCountry}"
+						},
+						{
+							"KeyName": "AddressCorrespondenceLanguage",
+							"Value": "{AddressCorrespondenceLanguage}"
+						},
+						{
+							"KeyName": "PurgAggrgdProdCmplncSuplrSts",
+							"Value": "{PurgAggrgdProdCmplncSuplrSts}"
+						},
+						{
+							"KeyName": "PurgAggrgdProdMarketabilitySts",
+							"Value": "{PurgAggrgdProdMarketabilitySts}"
+						},
+						{
+							"KeyName": "PurgAggrgdSftyDataSheetStatus",
+							"Value": "{PurgAggrgdSftyDataSheetStatus}"
+						},
+						{
+							"KeyName": "PurgProdCmplncTotDngrsGoodsSts",
+							"Value": "{PurgProdCmplncTotDngrsGoodsSts}"
+						},
+						{
+							"KeyName": "YY1_SAPCPTravelID_PDH",
+							"Value": "{YY1_SAPCPTravelID_PDH}"
+						},
+						{
+							"KeyName": "YY1_TravelID_PDH",
+							"Value": "{YY1_TravelID_PDH}"
+						},
+						{
+							"KeyName": "YY1_BookingReference_PDH",
+							"Value": "{YY1_BookingReference_PDH}"
+						},
+						{
+							"KeyName": "YY1_BookingReference_PDHF",
+							"Value": "{YY1_BookingReference_PDHF}"
+						},
+						{
+							"KeyName": "YY1_SAPCPTravelID_PDHF",
+							"Value": "{YY1_SAPCPTravelID_PDHF}"
+						},
+						{
+							"KeyName": "YY1_TravelID_PDHF",
+							"Value": "{YY1_TravelID_PDHF}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				},
+				{
+					"Header": {
+						"Caption": "to_PurchaseOrderItem"
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{PurchaseOrderItem}",
+						"DetailImage": "",
+						"DetailImageIsCircular": false,
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{RequisitionerName}",
+						"Footnote": "{PurchasingDocumentDeletionCode}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{PurchaseOrderItemText}",
+						"Subhead": "{PurchaseOrder}",
+						"SubstatusText": "{Plant}",
+						"OnPress": "/MDK1vMore/Actions/A_PurchaseOrderItem/NavToA_PurchaseOrderItem_Detail.action"
+					},
+					"Target": {
+						"EntitySet": "{#Property:@odata.readLink}/to_PurchaseOrderItem",
+						"Service": "/MDK1vMore/Services/service1.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "to_PurchaseOrderNote"
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{Language}",
+						"DetailImage": "",
+						"DetailImageIsCircular": false,
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{PurchaseOrder}",
+						"Footnote": "{PlainLongText}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "",
+						"Subhead": "{TextObjectType}",
+						"SubstatusText": "",
+						"OnPress": "/MDK1vMore/Actions/A_PurchaseOrderNote/NavToA_PurchaseOrderNote_Detail.action"
+					},
+					"Target": {
+						"EntitySet": "{#Property:@odata.readLink}/to_PurchaseOrderNote",
+						"Service": "/MDK1vMore/Services/service1.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+					"Header": {
+						"Caption": "notes"
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{a_PurchaseOrder_PurchaseOrder}",
+						"DetailImage": "",
+						"DetailImageIsCircular": false,
+						"Icons": [],
+						"StatusImage": "",
+						"Title": "{note}",
+						"Footnote": "",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "",
+						"Subhead": "{rate}",
+						"SubstatusText": "",
+						"OnPress": "/MDK1vMore/Actions/notes/NavTonotes_Detail.action"
+					},
+					"Target": {
+						"EntitySet": "{#Property:@odata.readLink}/notes",
+						"Service": "/MDK1vMore/Services/service1.service"
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"DataSubscriptions": [
+				"A_PurchaseOrderItem",
+				"A_PurchaseOrderNote",
+				"notes"
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_PurchaseOrder_Detail",
+	"PrefersLargeCaption": true
+}

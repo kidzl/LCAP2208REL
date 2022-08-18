@@ -1,0 +1,58 @@
+{
+	"Caption": "A_PurchaseOrderNote",
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Header": {
+						"UseTopPadding": false
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{Language}",
+						"DetailImage": "",
+						"DetailImageIsCircular": false,
+						"Icons": [],
+						"OnPress": "/MDK1vMore/Actions/A_PurchaseOrderNote/NavToA_PurchaseOrderNote_Detail.action",
+						"StatusImage": "",
+						"Title": "{PurchaseOrder}",
+						"Footnote": "{PlainLongText}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "",
+						"Subhead": "{TextObjectType}",
+						"SubstatusText": ""
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					},
+					"Target": {
+						"EntitySet": "A_PurchaseOrderNote",
+						"Service": "/MDK1vMore/Services/service1.service",
+						"QueryOptions": ""
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_PurchaseOrderNote_List",
+	"PrefersLargeCaption": true
+}

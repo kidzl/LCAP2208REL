@@ -1,0 +1,45 @@
+{
+	"Caption": "Main",
+	"Controls": [
+		{
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable",
+			"Sections": [
+				{
+					"Buttons": [
+						{
+							"OnPress": "/MDK1vMore/Actions/A_PurchaseOrder/NavToA_PurchaseOrder_List.action",
+							"TextAlignment": "center",
+							"Title": "A_PurchaseOrder"
+						},
+						{
+							"OnPress": "/MDK1vMore/Actions/comments/NavTocomments_List.action",
+							"TextAlignment": "center",
+							"Title": "comments"
+						},
+						{
+							"OnPress": "/MDK1vMore/Actions/notes/NavTonotes_List.action",
+							"TextAlignment": "center",
+							"Title": "notes"
+						}
+					],
+					"_Name": "SectionButtonTable0",
+					"_Type": "Section.Type.ButtonTable"
+				}
+			]
+		}
+	],
+	"_Name": "Main",
+	"_Type": "Page",
+	"ToolBar": {
+		"Items": [
+			{
+				"_Name": "LogoutToolbarItem",
+				"_Type": "Control.Type.ToolbarItem",
+				"Caption": "Logout",
+				"OnPress": "/MDK1vMore/Actions/Logout.action"
+			}
+		]
+	},
+	"PrefersLargeCaption": true
+}

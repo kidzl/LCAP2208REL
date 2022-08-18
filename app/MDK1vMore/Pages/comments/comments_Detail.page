@@ -1,0 +1,56 @@
+{
+	"Caption": "comments",
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"DetailImage": "",
+						"HeadlineText": "{comments}",
+						"Subhead": "{rate}",
+						"Tags": [],
+						"BodyText": "",
+						"Footnote": "",
+						"Description": "{a_PurchaseOrder_PurchaseOrder}",
+						"StatusText": "",
+						"StatusImage": "",
+						"SubstatusImage": "",
+						"SubstatusText": ""
+					},
+					"_Type": "Section.Type.ObjectHeader"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"KeyName": "comments",
+							"Value": "{comments}"
+						},
+						{
+							"KeyName": "rate",
+							"Value": "{rate}"
+						},
+						{
+							"KeyName": "a_PurchaseOrder_PurchaseOrder",
+							"Value": "{a_PurchaseOrder_PurchaseOrder}"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"MaxItemCount": 1,
+					"_Name": "SectionKeyValue0",
+					"_Type": "Section.Type.KeyValue"
+				}
+			],
+			"DataSubscriptions": [],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "comments_Detail",
+	"PrefersLargeCaption": true
+}

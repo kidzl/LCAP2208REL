@@ -1,0 +1,58 @@
+{
+	"Caption": "A_PurchaseOrderItem",
+	"ActionBar": {
+		"Items": []
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Header": {
+						"UseTopPadding": false
+					},
+					"ObjectCell": {
+						"AccessoryType": "disclosureIndicator",
+						"Description": "{PurchaseOrderItem}",
+						"DetailImage": "",
+						"DetailImageIsCircular": false,
+						"Icons": [],
+						"OnPress": "/MDK1vMore/Actions/A_PurchaseOrderItem/NavToA_PurchaseOrderItem_Detail.action",
+						"StatusImage": "",
+						"Title": "{RequisitionerName}",
+						"Footnote": "{PurchasingDocumentDeletionCode}",
+						"PreserveIconStackSpacing": false,
+						"StatusText": "{PurchaseOrderItemText}",
+						"Subhead": "{PurchaseOrder}",
+						"SubstatusText": "{Plant}"
+					},
+					"Search": {
+						"Enabled": true,
+						"Placeholder": "Item Search",
+						"BarcodeScanner": true,
+						"Delay": 500,
+						"MinimumCharacterThreshold": 3
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Loading more items, please wait..."
+					},
+					"Target": {
+						"EntitySet": "A_PurchaseOrderItem",
+						"Service": "/MDK1vMore/Services/service1.service",
+						"QueryOptions": ""
+					},
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true,
+				"Text": "Loading, please wait..."
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "A_PurchaseOrderItem_List",
+	"PrefersLargeCaption": true
+}

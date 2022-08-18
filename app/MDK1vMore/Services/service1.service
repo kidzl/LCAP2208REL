@@ -1,0 +1,9 @@
+{
+    "DestinationName": "../service/LCAPTestAug18/",
+    "OfflineEnabled": false,
+    "LanguageURLParam": "",
+    "OnlineOptions": {},
+    "PathSuffix": "",
+    "SourceType": "Cloud",
+    "ServiceUrl":""
+}

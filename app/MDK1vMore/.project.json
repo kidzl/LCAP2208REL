@@ -1,0 +1,85 @@
+{
+	"Credential": "cf",
+	"CF": {
+		"Target": "",
+		"Organization": "",
+		"Space": "",
+		"Deploy": {
+			"Description": "My SAP application",
+			"WebClient": {
+				"Runtime": "preview",
+				"URL": ""
+			},
+			"Destination": [
+				{
+					"CF": "LCAPTestAug18-app-srv",
+					"MDK": "../service/LCAPTestAug18/",
+					"URL": ""
+				}
+			]
+		}
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "",
+		"AppId": "lcap.LCAPTestAug18.MDK1vMore",
+		"Destination": []
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": ""
+	},
+	"LCAP": {
+		"FullName": "LCAPTestAug18_MDK1vMore",
+		"Service": [
+			{
+				"mdk": "MDK1vMore/Services/service1.service",
+				"cap": {
+					"name": "LCAPTestAug18Service",
+					"sourcePath": "srv/service.cds",
+					"path": "/service/LCAPTestAug18/",
+					"entryPath": "/service/LCAPTestAug18",
+					"destination": "LCAPTestAug18-app-srv",
+					"value": "0"
+				},
+				"links": [
+					{
+						"entity": "LCAPTestAug18Service.A_PurchaseOrder",
+						"files": [
+							"MDK1vMore/Pages/A_PurchaseOrder/A_PurchaseOrder_List.page"
+						]
+					},
+					{
+						"entity": "LCAPTestAug18Service.A_PurchaseOrderItem",
+						"files": [
+							"MDK1vMore/Pages/A_PurchaseOrderItem/A_PurchaseOrderItem_List.page"
+						]
+					},
+					{
+						"entity": "LCAPTestAug18Service.A_PurchaseOrderNote",
+						"files": [
+							"MDK1vMore/Pages/A_PurchaseOrderNote/A_PurchaseOrderNote_List.page"
+						]
+					},
+					{
+						"entity": "LCAPTestAug18Service.comments",
+						"files": [
+							"MDK1vMore/Pages/comments/comments_List.page"
+						]
+					},
+					{
+						"entity": "LCAPTestAug18Service.notes",
+						"files": [
+							"MDK1vMore/Pages/notes/notes_List.page"
+						]
+					}
+				]
+			}
+		],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	}
+}

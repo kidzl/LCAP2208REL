@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+    <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+  </edmx:Reference>
+  <edmx:DataServices>
+    <Schema Namespace="LCAPTestAug18Service" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EntityContainer Name="EntityContainer">
+        <EntitySet Name="A_PurchaseOrder" EntityType="LCAPTestAug18Service.A_PurchaseOrder">
+          <NavigationPropertyBinding Path="to_PurchaseOrderItem" Target="A_PurchaseOrderItem"/>
+          <NavigationPropertyBinding Path="to_PurchaseOrderNote" Target="A_PurchaseOrderNote"/>
+          <NavigationPropertyBinding Path="comments" Target="comments"/>
+          <NavigationPropertyBinding Path="notes" Target="notes"/>
+        </EntitySet>
+        <EntitySet Name="comments" EntityType="LCAPTestAug18Service.comments">
+          <NavigationPropertyBinding Path="a_PurchaseOrder" Target="A_PurchaseOrder"/>
+        </EntitySet>
+        <EntitySet Name="notes" EntityType="LCAPTestAug18Service.notes">
+          <NavigationPropertyBinding Path="a_PurchaseOrder" Target="A_PurchaseOrder"/>
+        </EntitySet>
+        <EntitySet Name="A_PurchaseOrderItem" EntityType="LCAPTestAug18Service.A_PurchaseOrderItem">
+          <NavigationPropertyBinding Path="to_PurchaseOrder" Target="A_PurchaseOrder"/>
+          <NavigationPropertyBinding Path="to_AccountAssignment" Target="A_PurOrdAccountAssignment"/>
+          <NavigationPropertyBinding Path="to_PurchaseOrderItemNote" Target="A_PurchaseOrderItemNote"/>
+          <NavigationPropertyBinding Path="to_PurchaseOrderPricingElement" Target="A_PurOrdPricingElement"/>
+          <NavigationPropertyBinding Path="to_ScheduleLine" Target="A_PurchaseOrderScheduleLine"/>
+        </EntitySet>
+        <EntitySet Name="A_PurchaseOrderNote" EntityType="LCAPTestAug18Service.A_PurchaseOrderNote"/>
+        <EntitySet Name="A_PurOrdAccountAssignment" EntityType="LCAPTestAug18Service.A_PurOrdAccountAssignment"/>
+        <EntitySet Name="A_PurchaseOrderItemNote" EntityType="LCAPTestAug18Service.A_PurchaseOrderItemNote"/>
+        <EntitySet Name="A_PurOrdPricingElement" EntityType="LCAPTestAug18Service.A_PurOrdPricingElement"/>
+        <EntitySet Name="A_PurchaseOrderScheduleLine" EntityType="LCAPTestAug18Service.A_PurchaseOrderScheduleLine">
+          <NavigationPropertyBinding Path="to_SubcontractingComponent" Target="A_POSubcontractingComponent"/>
+        </EntitySet>
+        <EntitySet Name="A_POSubcontractingComponent" EntityType="LCAPTestAug18Service.A_POSubcontractingComponent"/>
+      </EntityContainer>
+      <EntityType Name="A_PurchaseOrder">
+        <Key>
+          <PropertyRef Name="PurchaseOrder"/>
+        </Key>
+        <Property Name="PurchaseOrder" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="CompanyCode" Type="Edm.String" MaxLength="4"/>
+        <Property Name="PurchaseOrderType" Type="Edm.String" MaxLength="4"/>
+        <Property Name="PurchasingDocumentDeletionCode" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PurchasingProcessingStatus" Type="Edm.String" MaxLength="2"/>
+        <Property Name="CreatedByUser" Type="Edm.String" MaxLength="12"/>
+        <Property Name="CreationDate" Type="Edm.Date"/>
+        <Property Name="LastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+        <Property Name="Supplier" Type="Edm.String" MaxLength="10"/>
+        <Property Name="PurchaseOrderSubtype" Type="Edm.String" MaxLength="1"/>
+        <Property Name="Language" Type="Edm.String" MaxLength="2"/>
+        <Property Name="PaymentTerms" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CashDiscount1Days" Type="Edm.Decimal" Scale="0" Precision="3"/>
+        <Property Name="CashDiscount2Days" Type="Edm.Decimal" Scale="0" Precision="3"/>
+        <Property Name="NetPaymentDays" Type="Edm.Decimal" Scale="0" Precision="3"/>
+        <Property Name="CashDiscount1Percent" Type="Edm.Decimal" Scale="3" Precision="5"/>
+        <Property Name="CashDiscount2Percent" Type="Edm.Decimal" Scale="3" Precision="5"/>
+        <Property Name="PurchasingOrganization" Type="Edm.String" MaxLength="4"/>
+        <Property Name="PurchasingDocumentOrigin" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PurchasingGroup" Type="Edm.String" MaxLength="3"/>
+        <Property Name="PurchaseOrderDate" Type="Edm.Date"/>
+        <Property Name="DocumentCurrency" Type="Edm.String" MaxLength="5"/>
+        <Property Name="ExchangeRate" Type="Edm.String" MaxLength="12"/>
+        <Property Name="ExchangeRateIsFixed" Type="Edm.Boolean"/>
+        <Property Name="ValidityStartDate" Type="Edm.Date"/>
+        <Property Name="ValidityEndDate" Type="Edm.Date"/>
+        <Property Name="SupplierQuotationExternalID" Type="Edm.String" MaxLength="10"/>
+        <Property Name="PurchasingCollectiveNumber" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SupplierRespSalesPersonName" Type="Edm.String" MaxLength="30"/>
+        <Property Name="SupplierPhoneNumber" Type="Edm.String" MaxLength="16"/>
+        <Property Name="SupplyingSupplier" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SupplyingPlant" Type="Edm.String" MaxLength="4"/>
+        <Property Name="IncotermsClassification" Type="Edm.String" MaxLength="3"/>
+        <Property Name="CorrespncExternalReference" Type="Edm.String" MaxLength="12"/>
+        <Property Name="CorrespncInternalReference" Type="Edm.String" MaxLength="12"/>
+        <Property Name="InvoicingParty" Type="Edm.String" MaxLength="10"/>
+        <Property Name="ReleaseIsNotCompleted" Type="Edm.Boolean"/>
+        <Property Name="PurchasingCompletenessStatus" Type="Edm.Boolean"/>
+        <Property Name="IncotermsVersion" Type="Edm.String" MaxLength="4"/>
+        <Property Name="IncotermsLocation1" Type="Edm.String" MaxLength="70"/>
+        <Property Name="IncotermsLocation2" Type="Edm.String" MaxLength="70"/>
+        <Property Name="ManualSupplierAddressID" Type="Edm.String" MaxLength="10"/>
+        <Property Name="IsEndOfPurposeBlocked" Type="Edm.String" MaxLength="1"/>
+        <Property Name="AddressCityName" Type="Edm.String" MaxLength="40"/>
+        <Property Name="AddressFaxNumber" Type="Edm.String" MaxLength="30"/>
+        <Property Name="AddressHouseNumber" Type="Edm.String" MaxLength="10"/>
+        <Property Name="AddressName" Type="Edm.String" MaxLength="40"/>
+        <Property Name="AddressPostalCode" Type="Edm.String" MaxLength="10"/>
+        <Property Name="AddressStreetName" Type="Edm.String" MaxLength="60"/>
+        <Property Name="AddressPhoneNumber" Type="Edm.String" MaxLength="30"/>
+        <Property Name="AddressRegion" Type="Edm.String" MaxLength="3"/>
+        <Property Name="AddressCountry" Type="Edm.String" MaxLength="3"/>
+        <Property Name="AddressCorrespondenceLanguage" Type="Edm.String" MaxLength="2"/>
+        <Property Name="PurgAggrgdProdCmplncSuplrSts" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PurgAggrgdProdMarketabilitySts" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PurgAggrgdSftyDataSheetStatus" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PurgProdCmplncTotDngrsGoodsSts" Type="Edm.String" MaxLength="1"/>
+        <Property Name="YY1_SAPCPTravelID_PDH" Type="Edm.String" MaxLength="8"/>
+        <Property Name="YY1_TravelID_PDH" Type="Edm.Decimal" Scale="0" Precision="5"/>
+        <Property Name="YY1_BookingReference_PDH" Type="Edm.String" MaxLength="20"/>
+        <Property Name="YY1_BookingReference_PDHF" Type="Edm.Byte"/>
+        <Property Name="YY1_SAPCPTravelID_PDHF" Type="Edm.Byte"/>
+        <Property Name="YY1_TravelID_PDHF" Type="Edm.Byte"/>
+        <NavigationProperty Name="to_PurchaseOrderItem" Type="Collection(LCAPTestAug18Service.A_PurchaseOrderItem)">
+          <OnDelete Action="Cascade"/>
+        </NavigationProperty>
+        <NavigationProperty Name="to_PurchaseOrderNote" Type="Collection(LCAPTestAug18Service.A_PurchaseOrderNote)">
+          <OnDelete Action="Cascade"/>
+        </NavigationProperty>
+        <NavigationProperty Name="comments" Type="LCAPTestAug18Service.comments" Partner="a_PurchaseOrder">
+          <ReferentialConstraint Property="PurchaseOrder" ReferencedProperty="a_PurchaseOrder_PurchaseOrder"/>
+        </NavigationProperty>
+        <NavigationProperty Name="notes" Type="Collection(LCAPTestAug18Service.notes)" Partner="a_PurchaseOrder"/>
+      </EntityType>
+      <EntityType Name="comments">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+        <Property Name="comments" Type="Edm.String" MaxLength="100"/>
+        <Property Name="rate" Type="Edm.Int32"/>
+        <NavigationProperty Name="a_PurchaseOrder" Type="LCAPTestAug18Service.A_PurchaseOrder" Partner="comments">
+          <ReferentialConstraint Property="a_PurchaseOrder_PurchaseOrder" ReferencedProperty="PurchaseOrder"/>
+        </NavigationProperty>
+        <Property Name="a_PurchaseOrder_PurchaseOrder" Type="Edm.String" MaxLength="10"/>
+      </EntityType>
+      <EntityType Name="notes">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+        <Property Name="note" Type="Edm.String" MaxLength="100"/>
+        <Property Name="rate" Type="Edm.Int32"/>
+        <NavigationProperty Name="a_PurchaseOrder" Type="LCAPTestAug18Service.A_PurchaseOrder" Partner="notes">
+          <ReferentialConstraint Property="a_PurchaseOrder_PurchaseOrder" ReferencedProperty="PurchaseOrder"/>
+        </NavigationProperty>
+        <Property Name="a_PurchaseOrder_PurchaseOrder" Type="Edm.String" MaxLength="10"/>
+      </EntityType>
+      <EntityType Name="A_PurchaseOrderItem">
+        <Key>
+          <PropertyRef Name="PurchaseOrder"/>
+          <PropertyRef Name="PurchaseOrderItem"/>
+        </Key>
+        <Property Name="PurchaseOrder" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="PurchaseOrderItem" Type="Edm.String" MaxLength="5" Nullable="false"/>
+        <Property Name="PurchasingDocumentDeletionCode" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PurchaseOrderItemText" Type="Edm.String" MaxLength="40"/>
+        <Property Name="Plant" Type="Edm.String" MaxLength="4"/>
+        <Property Name="StorageLocation" Type="Edm.String" MaxLength="4"/>
+        <Property Name="MaterialGroup" Type="Edm.String" MaxLength="9"/>
+        <Property Name="PurchasingInfoRecord" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SupplierMaterialNumber" Type="Edm.String" MaxLength="35"/>
+        <Property Name="OrderQuantity" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="PurchaseOrderQuantityUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="OrderPriceUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="OrderPriceUnitToOrderUnitNmrtr" Type="Edm.Decimal" Scale="0" Precision="5"/>
+        <Property Name="OrdPriceUnitToOrderUnitDnmntr" Type="Edm.Decimal" Scale="0" Precision="5"/>
+        <Property Name="DocumentCurrency" Type="Edm.String" MaxLength="5"/>
+        <Property Name="NetPriceAmount" Type="Edm.Decimal" Scale="3" Precision="12"/>
+        <Property Name="NetPriceQuantity" Type="Edm.Decimal" Scale="0" Precision="5"/>
+        <Property Name="TaxCode" Type="Edm.String" MaxLength="2"/>
+        <Property Name="ShippingInstruction" Type="Edm.String" MaxLength="2"/>
+        <Property Name="TaxDeterminationDate" Type="Edm.Date"/>
+        <Property Name="TaxCountry" Type="Edm.String" MaxLength="3"/>
+        <Property Name="PriceIsToBePrinted" Type="Edm.Boolean"/>
+        <Property Name="OverdelivTolrtdLmtRatioInPct" Type="Edm.Decimal" Scale="1" Precision="3"/>
+        <Property Name="UnlimitedOverdeliveryIsAllowed" Type="Edm.Boolean"/>
+        <Property Name="UnderdelivTolrtdLmtRatioInPct" Type="Edm.Decimal" Scale="1" Precision="3"/>
+        <Property Name="ValuationType" Type="Edm.String" MaxLength="10"/>
+        <Property Name="IsCompletelyDelivered" Type="Edm.Boolean"/>
+        <Property Name="IsFinallyInvoiced" Type="Edm.Boolean"/>
+        <Property Name="PurchaseOrderItemCategory" Type="Edm.String" MaxLength="1"/>
+        <Property Name="AccountAssignmentCategory" Type="Edm.String" MaxLength="1"/>
+        <Property Name="MultipleAcctAssgmtDistribution" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PartialInvoiceDistribution" Type="Edm.String" MaxLength="1"/>
+        <Property Name="GoodsReceiptIsExpected" Type="Edm.Boolean"/>
+        <Property Name="GoodsReceiptIsNonValuated" Type="Edm.Boolean"/>
+        <Property Name="InvoiceIsExpected" Type="Edm.Boolean"/>
+        <Property Name="InvoiceIsGoodsReceiptBased" Type="Edm.Boolean"/>
+        <Property Name="PurchaseContract" Type="Edm.String" MaxLength="10"/>
+        <Property Name="PurchaseContractItem" Type="Edm.String" MaxLength="5"/>
+        <Property Name="Customer" Type="Edm.String" MaxLength="10"/>
+        <Property Name="Subcontractor" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SupplierIsSubcontractor" Type="Edm.Boolean"/>
+        <Property Name="ItemNetWeight" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="ItemWeightUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="TaxJurisdiction" Type="Edm.String" MaxLength="15"/>
+        <Property Name="PricingDateControl" Type="Edm.String" MaxLength="1"/>
+        <Property Name="ItemVolume" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="ItemVolumeUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="SupplierConfirmationControlKey" Type="Edm.String" MaxLength="4"/>
+        <Property Name="IncotermsClassification" Type="Edm.String" MaxLength="3"/>
+        <Property Name="IncotermsTransferLocation" Type="Edm.String" MaxLength="28"/>
+        <Property Name="EvaldRcptSettlmtIsAllowed" Type="Edm.Boolean"/>
+        <Property Name="PurchaseRequisition" Type="Edm.String" MaxLength="10"/>
+        <Property Name="PurchaseRequisitionItem" Type="Edm.String" MaxLength="5"/>
+        <Property Name="IsReturnsItem" Type="Edm.Boolean"/>
+        <Property Name="RequisitionerName" Type="Edm.String" MaxLength="12"/>
+        <Property Name="ServicePackage" Type="Edm.String" MaxLength="10"/>
+        <Property Name="EarmarkedFunds" Type="Edm.String" MaxLength="10"/>
+        <Property Name="EarmarkedFundsDocument" Type="Edm.String" MaxLength="10"/>
+        <Property Name="EarmarkedFundsItem" Type="Edm.String" MaxLength="3"/>
+        <Property Name="EarmarkedFundsDocumentItem" Type="Edm.String" MaxLength="3"/>
+        <Property Name="IncotermsLocation1" Type="Edm.String" MaxLength="70"/>
+        <Property Name="IncotermsLocation2" Type="Edm.String" MaxLength="70"/>
+        <Property Name="Material" Type="Edm.String" MaxLength="40"/>
+        <Property Name="InternationalArticleNumber" Type="Edm.String" MaxLength="18"/>
+        <Property Name="ManufacturerMaterial" Type="Edm.String" MaxLength="40"/>
+        <Property Name="ServicePerformer" Type="Edm.String" MaxLength="10"/>
+        <Property Name="ProductType" Type="Edm.String" MaxLength="2"/>
+        <Property Name="ExpectedOverallLimitAmount" Type="Edm.Decimal" Scale="3" Precision="14"/>
+        <Property Name="OverallLimitAmount" Type="Edm.Decimal" Scale="3" Precision="14"/>
+        <Property Name="PurContractForOverallLimit" Type="Edm.String" MaxLength="10"/>
+        <Property Name="PurchasingParentItem" Type="Edm.String" MaxLength="5"/>
+        <Property Name="ReferenceDeliveryAddressID" Type="Edm.String" MaxLength="10"/>
+        <Property Name="DeliveryAddressID" Type="Edm.String" MaxLength="10"/>
+        <Property Name="DeliveryAddressName" Type="Edm.String" MaxLength="40"/>
+        <Property Name="DeliveryAddressName2" Type="Edm.String" MaxLength="40"/>
+        <Property Name="DeliveryAddressFullName" Type="Edm.String" MaxLength="80"/>
+        <Property Name="DeliveryAddressStreetName" Type="Edm.String" MaxLength="60"/>
+        <Property Name="DeliveryAddressHouseNumber" Type="Edm.String" MaxLength="10"/>
+        <Property Name="DeliveryAddressCityName" Type="Edm.String" MaxLength="40"/>
+        <Property Name="DeliveryAddressPostalCode" Type="Edm.String" MaxLength="10"/>
+        <Property Name="DeliveryAddressRegion" Type="Edm.String" MaxLength="3"/>
+        <Property Name="DeliveryAddressCountry" Type="Edm.String" MaxLength="3"/>
+        <Property Name="DeliveryAddressDistrictName" Type="Edm.String" MaxLength="40"/>
+        <Property Name="DownPaymentType" Type="Edm.String" MaxLength="4"/>
+        <Property Name="DownPaymentPercentageOfTotAmt" Type="Edm.Decimal" Scale="2" Precision="5"/>
+        <Property Name="DownPaymentAmount" Type="Edm.Decimal" Scale="3" Precision="12"/>
+        <Property Name="DownPaymentDueDate" Type="Edm.Date"/>
+        <Property Name="BR_MaterialUsage" Type="Edm.String" MaxLength="1"/>
+        <Property Name="BR_MaterialOrigin" Type="Edm.String" MaxLength="1"/>
+        <Property Name="BR_CFOPCategory" Type="Edm.String" MaxLength="2"/>
+        <Property Name="BR_IsProducedInHouse" Type="Edm.Boolean"/>
+        <Property Name="ConsumptionTaxCtrlCode" Type="Edm.String" MaxLength="16"/>
+        <Property Name="PurgProdCmplncSupplierStatus" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PurgProductMarketabilityStatus" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PurgSafetyDataSheetStatus" Type="Edm.String" MaxLength="1"/>
+        <Property Name="PurgProdCmplncDngrsGoodsStatus" Type="Edm.String" MaxLength="1"/>
+        <NavigationProperty Name="to_PurchaseOrder" Type="LCAPTestAug18Service.A_PurchaseOrder">
+          <ReferentialConstraint Property="PurchaseOrder" ReferencedProperty="PurchaseOrder"/>
+        </NavigationProperty>
+        <NavigationProperty Name="to_AccountAssignment" Type="Collection(LCAPTestAug18Service.A_PurOrdAccountAssignment)">
+          <OnDelete Action="Cascade"/>
+        </NavigationProperty>
+        <NavigationProperty Name="to_PurchaseOrderItemNote" Type="Collection(LCAPTestAug18Service.A_PurchaseOrderItemNote)">
+          <OnDelete Action="Cascade"/>
+        </NavigationProperty>
+        <NavigationProperty Name="to_PurchaseOrderPricingElement" Type="Collection(LCAPTestAug18Service.A_PurOrdPricingElement)">
+          <OnDelete Action="Cascade"/>
+        </NavigationProperty>
+        <NavigationProperty Name="to_ScheduleLine" Type="Collection(LCAPTestAug18Service.A_PurchaseOrderScheduleLine)">
+          <OnDelete Action="Cascade"/>
+        </NavigationProperty>
+      </EntityType>
+      <EntityType Name="A_PurchaseOrderNote">
+        <Key>
+          <PropertyRef Name="PurchaseOrder"/>
+          <PropertyRef Name="TextObjectType"/>
+          <PropertyRef Name="Language"/>
+        </Key>
+        <Property Name="PurchaseOrder" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="TextObjectType" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="Language" Type="Edm.String" MaxLength="2" Nullable="false"/>
+        <Property Name="PlainLongText" Type="Edm.String"/>
+      </EntityType>
+      <EntityType Name="A_PurOrdAccountAssignment">
+        <Key>
+          <PropertyRef Name="PurchaseOrder"/>
+          <PropertyRef Name="PurchaseOrderItem"/>
+          <PropertyRef Name="AccountAssignmentNumber"/>
+        </Key>
+        <Property Name="PurchaseOrder" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="PurchaseOrderItem" Type="Edm.String" MaxLength="5" Nullable="false"/>
+        <Property Name="AccountAssignmentNumber" Type="Edm.String" MaxLength="2" Nullable="false"/>
+        <Property Name="IsDeleted" Type="Edm.Boolean"/>
+        <Property Name="PurchaseOrderQuantityUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="Quantity" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="MultipleAcctAssgmtDistrPercent" Type="Edm.Decimal" Scale="1" Precision="3"/>
+        <Property Name="DocumentCurrency" Type="Edm.String" MaxLength="5"/>
+        <Property Name="PurgDocNetAmount" Type="Edm.Decimal" Scale="3" Precision="14"/>
+        <Property Name="GLAccount" Type="Edm.String" MaxLength="10"/>
+        <Property Name="BusinessArea" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CostCenter" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SalesOrder" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SalesOrderItem" Type="Edm.String" MaxLength="6"/>
+        <Property Name="SalesOrderScheduleLine" Type="Edm.String" MaxLength="4"/>
+        <Property Name="MasterFixedAsset" Type="Edm.String" MaxLength="12"/>
+        <Property Name="FixedAsset" Type="Edm.String" MaxLength="4"/>
+        <Property Name="GoodsRecipientName" Type="Edm.String" MaxLength="12"/>
+        <Property Name="UnloadingPointName" Type="Edm.String" MaxLength="25"/>
+        <Property Name="ControllingArea" Type="Edm.String" MaxLength="4"/>
+        <Property Name="CostObject" Type="Edm.String" MaxLength="12"/>
+        <Property Name="OrderID" Type="Edm.String" MaxLength="12"/>
+        <Property Name="ProfitCenter" Type="Edm.String" MaxLength="10"/>
+        <Property Name="WBSElementInternalID" Type="Edm.String" MaxLength="24"/>
+        <Property Name="WBSElement" Type="Edm.String" MaxLength="24"/>
+        <Property Name="WBSElementExternalID" Type="Edm.String" MaxLength="24"/>
+        <Property Name="ProjectNetwork" Type="Edm.String" MaxLength="12"/>
+        <Property Name="NetworkActivity" Type="Edm.String" MaxLength="4"/>
+        <Property Name="RealEstateObject" Type="Edm.String" MaxLength="40"/>
+        <Property Name="PartnerAccountNumber" Type="Edm.String" MaxLength="10"/>
+        <Property Name="CommitmentItem" Type="Edm.String" MaxLength="24"/>
+        <Property Name="JointVentureRecoveryCode" Type="Edm.String" MaxLength="2"/>
+        <Property Name="FundsCenter" Type="Edm.String" MaxLength="16"/>
+        <Property Name="Fund" Type="Edm.String" MaxLength="10"/>
+        <Property Name="FunctionalArea" Type="Edm.String" MaxLength="16"/>
+        <Property Name="SettlementReferenceDate" Type="Edm.Date"/>
+        <Property Name="TaxCode" Type="Edm.String" MaxLength="2"/>
+        <Property Name="TaxJurisdiction" Type="Edm.String" MaxLength="15"/>
+        <Property Name="CostCtrActivityType" Type="Edm.String" MaxLength="6"/>
+        <Property Name="BusinessProcess" Type="Edm.String" MaxLength="12"/>
+        <Property Name="EarmarkedFundsDocument" Type="Edm.String" MaxLength="10"/>
+        <Property Name="GrantID" Type="Edm.String" MaxLength="20"/>
+        <Property Name="BudgetPeriod" Type="Edm.String" MaxLength="10"/>
+      </EntityType>
+      <EntityType Name="A_PurchaseOrderItemNote">
+        <Key>
+          <PropertyRef Name="PurchaseOrder"/>
+          <PropertyRef Name="PurchaseOrderItem"/>
+          <PropertyRef Name="TextObjectType"/>
+          <PropertyRef Name="Language"/>
+        </Key>
+        <Property Name="PurchaseOrder" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="PurchaseOrderItem" Type="Edm.String" MaxLength="5" Nullable="false"/>
+        <Property Name="TextObjectType" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="Language" Type="Edm.String" MaxLength="2" Nullable="false"/>
+        <Property Name="PlainLongText" Type="Edm.String"/>
+      </EntityType>
+      <EntityType Name="A_PurOrdPricingElement">
+        <Key>
+          <PropertyRef Name="PurchaseOrder"/>
+          <PropertyRef Name="PurchaseOrderItem"/>
+          <PropertyRef Name="PricingDocument"/>
+          <PropertyRef Name="PricingDocumentItem"/>
+          <PropertyRef Name="PricingProcedureStep"/>
+          <PropertyRef Name="PricingProcedureCounter"/>
+        </Key>
+        <Property Name="PurchaseOrder" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="PurchaseOrderItem" Type="Edm.String" MaxLength="5" Nullable="false"/>
+        <Property Name="PricingDocument" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="PricingDocumentItem" Type="Edm.String" MaxLength="6" Nullable="false"/>
+        <Property Name="PricingProcedureStep" Type="Edm.String" MaxLength="3" Nullable="false"/>
+        <Property Name="PricingProcedureCounter" Type="Edm.String" MaxLength="3" Nullable="false"/>
+        <Property Name="ConditionType" Type="Edm.String" MaxLength="4"/>
+        <Property Name="ConditionRateValue" Type="Edm.Decimal" Scale="9" Precision="24"/>
+        <Property Name="ConditionCurrency" Type="Edm.String" MaxLength="5"/>
+        <Property Name="PriceDetnExchangeRate" Type="Edm.String" MaxLength="12"/>
+        <Property Name="TransactionCurrency" Type="Edm.String" MaxLength="5"/>
+        <Property Name="ConditionAmount" Type="Edm.Decimal" Scale="3" Precision="16"/>
+        <Property Name="ConditionQuantityUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="ConditionQuantity" Type="Edm.Decimal" Scale="0" Precision="5"/>
+        <Property Name="ConditionApplication" Type="Edm.String" MaxLength="2"/>
+        <Property Name="PricingDateTime" Type="Edm.String" MaxLength="14"/>
+        <Property Name="ConditionCalculationType" Type="Edm.String" MaxLength="3"/>
+        <Property Name="ConditionBaseValue" Type="Edm.Decimal" Scale="9" Precision="24"/>
+        <Property Name="ConditionToBaseQtyNmrtr" Type="Edm.Decimal" Scale="0" Precision="10"/>
+        <Property Name="ConditionToBaseQtyDnmntr" Type="Edm.Decimal" Scale="0" Precision="10"/>
+        <Property Name="ConditionCategory" Type="Edm.String" MaxLength="1"/>
+        <Property Name="ConditionIsForStatistics" Type="Edm.Boolean"/>
+        <Property Name="PricingScaleType" Type="Edm.String" MaxLength="1"/>
+        <Property Name="IsRelevantForAccrual" Type="Edm.Boolean"/>
+        <Property Name="CndnIsRelevantForInvoiceList" Type="Edm.String" MaxLength="1"/>
+        <Property Name="ConditionOrigin" Type="Edm.String" MaxLength="1"/>
+        <Property Name="IsGroupCondition" Type="Edm.String" MaxLength="1"/>
+        <Property Name="CndnIsRelevantForLimitValue" Type="Edm.Boolean"/>
+        <Property Name="ConditionSequentialNumber" Type="Edm.String" MaxLength="3"/>
+        <Property Name="ConditionControl" Type="Edm.String" MaxLength="1"/>
+        <Property Name="ConditionInactiveReason" Type="Edm.String" MaxLength="1"/>
+        <Property Name="ConditionClass" Type="Edm.String" MaxLength="1"/>
+        <Property Name="FactorForConditionBasisValue" Type="Edm.Double"/>
+        <Property Name="PricingScaleBasis" Type="Edm.String" MaxLength="3"/>
+        <Property Name="ConditionScaleBasisValue" Type="Edm.Decimal" Scale="9" Precision="24"/>
+        <Property Name="ConditionScaleBasisCurrency" Type="Edm.String" MaxLength="5"/>
+        <Property Name="ConditionScaleBasisUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="CndnIsRelevantForIntcoBilling" Type="Edm.Boolean"/>
+        <Property Name="ConditionIsForConfiguration" Type="Edm.Boolean"/>
+        <Property Name="ConditionIsManuallyChanged" Type="Edm.Boolean"/>
+        <Property Name="ConditionRecord" Type="Edm.String" MaxLength="10"/>
+        <Property Name="AccessNumberOfAccessSequence" Type="Edm.String" MaxLength="3"/>
+      </EntityType>
+      <EntityType Name="A_PurchaseOrderScheduleLine">
+        <Key>
+          <PropertyRef Name="PurchasingDocument"/>
+          <PropertyRef Name="PurchasingDocumentItem"/>
+          <PropertyRef Name="ScheduleLine"/>
+        </Key>
+        <Property Name="PurchasingDocument" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="PurchasingDocumentItem" Type="Edm.String" MaxLength="5" Nullable="false"/>
+        <Property Name="ScheduleLine" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="DelivDateCategory" Type="Edm.String" MaxLength="1"/>
+        <Property Name="ScheduleLineDeliveryDate" Type="Edm.Date"/>
+        <Property Name="PurchaseOrderQuantityUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="ScheduleLineOrderQuantity" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="ScheduleLineDeliveryTime" Type="Edm.TimeOfDay"/>
+        <Property Name="SchedLineStscDeliveryDate" Type="Edm.Date"/>
+        <Property Name="PurchaseRequisition" Type="Edm.String" MaxLength="10"/>
+        <Property Name="PurchaseRequisitionItem" Type="Edm.String" MaxLength="5"/>
+        <Property Name="ScheduleLineCommittedQuantity" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="PerformancePeriodStartDate" Type="Edm.Date"/>
+        <Property Name="PerformancePeriodEndDate" Type="Edm.Date"/>
+        <NavigationProperty Name="to_SubcontractingComponent" Type="Collection(LCAPTestAug18Service.A_POSubcontractingComponent)">
+          <OnDelete Action="Cascade"/>
+        </NavigationProperty>
+      </EntityType>
+      <EntityType Name="A_POSubcontractingComponent">
+        <Key>
+          <PropertyRef Name="PurchaseOrder"/>
+          <PropertyRef Name="PurchaseOrderItem"/>
+          <PropertyRef Name="ScheduleLine"/>
+          <PropertyRef Name="ReservationItem"/>
+          <PropertyRef Name="RecordType"/>
+        </Key>
+        <Property Name="PurchaseOrder" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="PurchaseOrderItem" Type="Edm.String" MaxLength="5" Nullable="false"/>
+        <Property Name="ScheduleLine" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="ReservationItem" Type="Edm.String" MaxLength="4" Nullable="false"/>
+        <Property Name="RecordType" Type="Edm.String" MaxLength="1" Nullable="false"/>
+        <Property Name="Material" Type="Edm.String" MaxLength="40"/>
+        <Property Name="BOMItemDescription" Type="Edm.String" MaxLength="40"/>
+        <Property Name="RequiredQuantity" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="BaseUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="RequirementDate" Type="Edm.Date"/>
+        <Property Name="QuantityInEntryUnit" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="EntryUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="WithdrawnQuantity" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="Plant" Type="Edm.String" MaxLength="4"/>
+        <Property Name="Batch" Type="Edm.String" MaxLength="10"/>
+      </EntityType>
+      <Annotations Target="LCAPTestAug18Service.comments/ID">
+        <Annotation Term="Core.Computed" Bool="true"/>
+      </Annotations>
+      <Annotations Target="LCAPTestAug18Service.notes/ID">
+        <Annotation Term="Core.Computed" Bool="true"/>
+      </Annotations>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
